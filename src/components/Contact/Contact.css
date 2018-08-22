@@ -65,6 +65,7 @@
 }
 
 #form_wrap:hover #form {height:530px;}
+#form_wrap:active #form {height:530px;}
 
 #form_wrap label {
 	margin: 11px 20px 0 0; 	
@@ -164,6 +165,7 @@
 	}
 
 	#form_wrap:hover #form {height:470px;}
+	#form_wrap:active #form {height:470px;}
 
 	#form_wrap input[type=text], #form_wrap textarea, #form_wrap input[type=email] {
 		width: 250px; 
@@ -173,7 +175,8 @@
 	}
 
 	#form_wrap textarea{
-		height: 60px;
+		max-height: 80px;
+		max-width: 250px;
 	}
 
 	#form_wrap input[type=submit] {

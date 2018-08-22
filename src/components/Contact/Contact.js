@@ -54,7 +54,7 @@ class Contact extends React.Component{
 			<div id="contact" className="container-position">	        
 				<div id="wrap">	
 					<div id='form_wrap' className="mt7">
-						<div id="form" >
+						<div id="form">
 							<p>Dear Cage,</p>
 							<textarea  
 								name="message" 
