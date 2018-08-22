@@ -11,8 +11,12 @@ const Header = (props) => {
 				<FaInstagram className="ml3 pointer"/>
 				<FaPinterestP className="ml3 pointer"/>
 			</div>
-			<img src={Elephant} id="img-logo" alt="logo"/>			
-			<h1 className="mr4">{props.section}</h1>
+			<div id="container-logo">
+				<img src={Elephant} id="img-logo" alt="logo"/>	
+			</div>
+			<div id="section-name">		
+				<h1 className="mr2">{props.section}</h1>
+			</div>
 		</header>
 	);
 }
