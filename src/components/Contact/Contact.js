@@ -25,28 +25,33 @@ class Contact extends React.Component{
 		this.setState({sendStatus: ''});
 	}
 
-	onSubmit = () => {
-		this.setState({sendStatus: 'Sending ...'})
-		fetch('https://secure-waters-51389.herokuapp.com/contact', {
-			method: 'post',
-			headers: {'Content-Type': 'application/json'},
-			body: JSON.stringify({
-				email: this.state.email,
-				message: this.state.message,
-				name: this.state.name
+	onSubmit = () => {	
+
+		if(this.state.email.length === 0 || this.state.message.length === 0 || this.state.name.length === 0){
+			this.setState({sendStatus: 'Empty field'})
+		} else {
+			this.setState({sendStatus: 'Sending ...'})
+			fetch('https://secure-waters-51389.herokuapp.com/contact', {
+				method: 'post',
+				headers: {'Content-Type': 'application/json'},
+				body: JSON.stringify({
+					email: this.state.email,
+					message: this.state.message,
+					name: this.state.name
+				})
 			})
-		})
-			.then(response => response.json())
-			.then(message => {
-				if(message){
-					this.setState({message: '', email: '', name: ''})
-					this.setState({sendStatus: 'Message Sent!'})
-				} 
-			})	
-			.catch(err => {
-				console.log(err);
-				this.setState({sendStatus: 'Opsss, something went wrong!'})
-			});			
+				.then(response => response.json())
+				.then(message => {
+					if(message){
+						this.setState({message: '', email: '', name: ''})
+						this.setState({sendStatus: 'Message Sent!'})
+					} 
+				})	
+				.catch(err => {
+					console.log(err);
+					this.setState({sendStatus: 'Opsss, something went wrong!'})
+				});	
+		}		
 	}
 
 	render(){
@@ -93,7 +98,7 @@ class Contact extends React.Component{
 								id='btnSubmit'
 								onClick={this.onSubmit}
 							/>
-							<h4 className="mt4 ml2" style={{fontStyle: 'italic'}}>{this.state.sendStatus}</h4>
+							<h4 className="mt4 ml5" style={{fontStyle: 'italic'}}>{this.state.sendStatus}</h4>
 						</div>		
 					</div>    
 				</div>

@@ -16,6 +16,7 @@
 	-moz-transition: all 1s ease-in-out .3s;
 	-o-transition: all 1s ease-in-out .3s;
 	transition: all 1s ease-in-out .3s;
+	cursor: pointer;
 }	
 	
 #form_wrap:before {
@@ -62,10 +63,10 @@
 	-moz-transition: all 1s ease-in-out .3s;
 	-o-transition: all 1s ease-in-out .3s;
 	transition: all 1s ease-in-out .3s;
+	cursor: pointer;
 }
 
 #form_wrap:hover #form {height:530px;}
-#form_wrap:active #form {height:530px;}
 
 #form_wrap label {
 	margin: 11px 20px 0 0; 	
@@ -165,7 +166,6 @@
 	}
 
 	#form_wrap:hover #form {height:470px;}
-	#form_wrap:active #form {height:470px;}
 
 	#form_wrap input[type=text], #form_wrap textarea, #form_wrap input[type=email] {
 		width: 250px; 
