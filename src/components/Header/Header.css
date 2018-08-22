@@ -1,0 +1,22 @@
+#header{
+	background-color: rgba(5, 0, 0, 0.7);
+	height: 50px;
+	position: fixed;
+    z-index: 1;
+	top: 0;
+	color: rgba(213, 74, 74, 1);
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+#img-logo{
+	width: 55px;
+	height: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  #header{
+  	font-size: 0.8em;
+  }
+}
