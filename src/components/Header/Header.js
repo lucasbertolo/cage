@@ -1,5 +1,5 @@
 import React from 'react';
-import Elephant from "./elephant.png";
+import Elephant from "./elephant.jpg";
 import './Header.css';
 import {FaFacebookF, FaInstagram, FaPinterestP} from 'react-icons/fa';
 

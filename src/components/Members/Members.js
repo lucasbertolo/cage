@@ -10,7 +10,7 @@ class Members extends React.Component{
           show: false,
           id: 0,
           box: [],
-          imageUrl: 'https://www.grammy.com/sites/com/files/cage_the_elephant_spotlight_634966024.png',
+          imageUrl: 'https://i.imgur.com/6ApWymK.jpg',
         };
     }
 
