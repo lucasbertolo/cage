@@ -10,7 +10,7 @@ class Members extends React.Component{
           show: false,
           id: 0,
           box: [],
-          imageUrl: 'https://i.imgur.com/6ApWymK.jpg',
+          imageUrl: 'https://i.imgur.com/8LFtSbF.png',
         };
     }
 
