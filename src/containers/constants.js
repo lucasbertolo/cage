@@ -1,6 +1,6 @@
 export const SOURCES = [
   {
-    source: "https://i.imgur.com/INaUQPS.png",
+    source: "https://al8cddccn.cloudimg.io/cdn/n/n/https://i.imgur.com/EOPdQm9.png",
     id: 'Cage0',
     music : {
     	title: "Tell me I'm Pretty",
@@ -19,7 +19,7 @@ export const SOURCES = [
     }
   },
   {
-    source: "https://i.imgur.com/l74BQkC.png",
+    source: "https://al8cddccn.cloudimg.io/cdn/n/n/https://i.imgur.com/1LqjAn2.png",
     id: 'Cage1',
     music : {
     	title: "Cage The Elephant",
@@ -39,7 +39,7 @@ export const SOURCES = [
     }
   },
   {
-    source:"https://i.imgur.com/lj1xGhT.png",
+    source:"https://al8cddccn.cloudimg.io/cdn/n/n/https://i.imgur.com/5rYkIUZ.png",
     id: 'Cage2',
     music : {
     	title: "Melophobia",
@@ -58,7 +58,7 @@ export const SOURCES = [
     }
   },
   {
-    source:"https://i.imgur.com/Hc7htGm.png",
+    source:"https://al8cddccn.cloudimg.io/cdn/n/n/https://i.imgur.com/OerDvBp.png",
     id: 'Cage3',
     music : {
     	title: "Thank You Happy Birthday",
