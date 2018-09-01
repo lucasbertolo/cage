@@ -9,7 +9,8 @@ import Discography from '../components/Discography/Discography';
 import Calendar from '../components/Calendar/Calendar';
 import Contact from '../components/Contact/Contact';
 import Navbar from '../components/Navbar/Navbar';
-import Warning from '../components/Warning/Warning'
+import Warning from '../components/Warning/Warning';
+import ErrorBoundary from '../components/ErrorBoundary/ErrorBoundary';
 
 //constants
 import {MEMBERS, SOURCES, CONCERTS} from './constants';
@@ -36,18 +37,19 @@ class App extends Component {
 
     return (
       
-      <div className="App">    
-        <Warning handleReminder={this.handleReminder}
-                 reminder={this.state.reminder}/>    
-        <Header section={this.state.section}/> 
-        <Navbar updatingSectionName={this.updatingSectionName}/>
-        <Home />
-        <About />
-        <Members members={MEMBERS} /> 
-        <Discography sources={SOURCES} /> 
-        <Calendar concerts={CONCERTS}/> 
-        <Contact /> 
-        
+      <div className="App">  
+        <ErrorBoundary>  
+          <Warning handleReminder={this.handleReminder}
+                   reminder={this.state.reminder}/>    
+          <Header section={this.state.section}/> 
+          <Navbar updatingSectionName={this.updatingSectionName}/>
+          <Home />
+          <About />
+          <Members members={MEMBERS} /> 
+          <Discography sources={SOURCES} /> 
+          <Calendar concerts={CONCERTS}/> 
+          <Contact />
+        </ErrorBoundary>        
       </div>                             
     );
   }
