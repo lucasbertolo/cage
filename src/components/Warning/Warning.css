@@ -1,18 +1,10 @@
 /*CONTAINER BOX*/
-.box-war{
-  height: 400px;
-  width: 400px;
-  position: fixed;
-  right: 20px;
-  z-index: 1;
-  top: 100px;
-}
 .container-warning{
 	width: 230px;
   margin-left: 30%;
   height: 400px;
   top: 100px;
-  left: 50px;
+  right: 50px;
   position: fixed;
 }
 

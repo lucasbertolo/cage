@@ -1,4 +1,3 @@
-import {Animated} from "react-animated-css";
 import React from 'react';
 import './Warning.css'
 
@@ -11,13 +10,6 @@ class Warning extends React.Component {
   render(){
 
     return this.props.reminder ? (
-      <div className="box-war">
-        <Animated 
-           animationIn="flipInY" 
-           animationOut="zoomOutDown" 
-           isVisible={true} 
-           animationInDelay={3000}>
-
               <div className="container-warning">
 
                 <div className="thought"> 
@@ -41,10 +33,8 @@ class Warning extends React.Component {
                     </div>
                 </div>
               </div>
-          </Animated>
-          </div>
     ) 
-    : ''
+    : null
   }
 
 }

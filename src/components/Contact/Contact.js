@@ -56,7 +56,7 @@ class Contact extends React.Component{
 
 	render(){
 		return(
-			<div id="contact" className="container-position">	        
+			<div id="contact" className="container-position">	
 				<div id="wrap">	
 					<div id='form_wrap' className="mt7">
 						<div id="form">

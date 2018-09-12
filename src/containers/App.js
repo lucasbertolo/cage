@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LazyLoad from 'react-lazy-load';
 
 //components
 import Header from '../components/Header/Header';
@@ -8,12 +9,11 @@ import Members from '../components/Members/Members'
 import Discography from '../components/Discography/Discography';
 import Calendar from '../components/Calendar/Calendar';
 import Contact from '../components/Contact/Contact';
-import Navbar from '../components/Navbar/Navbar';
 import Warning from '../components/Warning/Warning';
 import ErrorBoundary from '../components/ErrorBoundary/ErrorBoundary';
 
 //constants
-import {MEMBERS, SOURCES, CONCERTS} from './constants';
+import {MEMBERS, SOURCES, CONCERTS} from './resources';
 
 import './App.css';
 
@@ -21,13 +21,9 @@ class App extends Component {
   constructor(props){
     super();
     this.state = {
-      section: '',
       reminder: true
     }
   }
-  updatingSectionName = (section) => {
-      this.setState({section})
-  }  
 
   handleReminder = () => {
     return this.setState({reminder: false})
@@ -42,13 +38,22 @@ class App extends Component {
           <Warning handleReminder={this.handleReminder}
                    reminder={this.state.reminder}/>    
           <Header section={this.state.section}/> 
-          <Navbar updatingSectionName={this.updatingSectionName}/>
           <Home />
-          <About />
-          <Members members={MEMBERS} /> 
-          <Discography sources={SOURCES} /> 
-          <Calendar concerts={CONCERTS}/> 
-          <Contact />
+          <LazyLoad>
+            <About />
+          </LazyLoad>
+          <LazyLoad>
+            <Members members={MEMBERS} /> 
+          </LazyLoad>
+          <LazyLoad>
+            <Discography sources={SOURCES} /> 
+          </LazyLoad>
+          <LazyLoad>
+            <Calendar concerts={CONCERTS}/> 
+          </LazyLoad>
+          <LazyLoad>
+            <Contact />
+          </LazyLoad>
         </ErrorBoundary>        
       </div>                             
     );
